@@ -15,12 +15,14 @@ function Popup({ isOpen, onClose, title, description }: Props){
     <>
       <Dialog open={isOpen} onClose={onClose} className="fixed inset-0 z-50 flex items-center justify-center">
         <div className="fixed inset-0 bg-black bg-opacity-30">
-          <DialogPanel className="bg-white rounded-lg p-6 max-w-md mx-auto">
-            <div className="flex justify-end">
-              <Button onClick={onClose} className="bg-blue-500 text-white px-2 py-1 rounded">X</Button>
+          <DialogPanel className="bg-white rounded-lg p-6 max-w-md mx-auto relative">
+            <div className="flex justify-between items-center">
+              <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>
+              <div className="flex justify-end">
+                <Button onClick={onClose} className="text-black">X</Button>
+              </div>
             </div>
-            <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>
-            <Description className="text-black">{description}</Description>
+            <Description className="text-black mt-4">{description}</Description>
           </DialogPanel>
         </div>
       </Dialog>
