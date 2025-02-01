@@ -5,9 +5,11 @@ import { Button, Dialog, DialogPanel, DialogTitle, Description } from "@headless
 interface Props {
   isOpen: boolean;
   onClose: () => void;
+  title: string;
+  description: string;
 }
 
-function Popup({ isOpen, onClose }: Props){
+function Popup({ isOpen, onClose, title, description }: Props){
 
   return (
     <>
@@ -17,8 +19,8 @@ function Popup({ isOpen, onClose }: Props){
             <div className="flex justify-end">
               <Button onClick={onClose} className="bg-blue-500 text-white px-2 py-1 rounded">X</Button>
             </div>
-            <DialogTitle className="text-lg font-bold text-black">Title</DialogTitle>
-            <Description className="text-black">This is a description</Description>
+            <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>
+            <Description className="text-black">{description}</Description>
           </DialogPanel>
         </div>
       </Dialog>

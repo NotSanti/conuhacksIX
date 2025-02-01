@@ -1,0 +1,26 @@
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+        color: #FFD700; /* Gold */
+    }
+    25% {
+        transform: rotate(-25deg);
+        color: #76bdf7e0; /* OrangeRed */
+    }
+    50% {
+        transform: rotate(25deg);
+        color: #76bdf7e0; /* LimeGreen */
+    }
+    75% {
+        transform: rotate(-25deg);
+        color: #76bdf7e0; /* DodgerBlue */
+    }
+    100% {
+        transform: rotate(0deg);
+        color: #FFD700; /* Gold */
+    }
+}
+
+.tilt-animation:hover {
+    animation: tilt 0.5s ease-in-out;
+}
