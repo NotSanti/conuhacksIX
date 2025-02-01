@@ -3,7 +3,7 @@
 import "./App.css";
 import { Button } from "@headlessui/react";
 import Achievements from "./components/Achievements";
-import Icon from './Icon.tsx'
+import Icon from './components/Icon.tsx'
 
 function App() {
   return (
