@@ -5,11 +5,12 @@ import { Button, Dialog, DialogPanel, DialogTitle, Description } from "@headless
 interface Props {
   isOpen: boolean;
   onClose: () => void;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
+  content?: React.ReactNode;
 }
 
-function Popup({ isOpen, onClose, title, description }: Props){
+function Popup({ isOpen, onClose, title, description, content}: Props){
 
   return (
     <>
@@ -17,12 +18,13 @@ function Popup({ isOpen, onClose, title, description }: Props){
         <div className="fixed inset-0 bg-black bg-opacity-30">
           <DialogPanel className="bg-white rounded-lg p-6 max-w-md mx-auto relative">
             <div className="flex justify-between items-center">
-              <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>
+              {title && <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>}
               <div className="flex justify-end">
                 <Button onClick={onClose} className="text-black">X</Button>
               </div>
             </div>
-            <Description className="text-black mt-4">{description}</Description>
+            {description && <Description className="text-black mt-4">{description}</Description>}
+            {content && <div className="mt-4">{content}</div>}
           </DialogPanel>
         </div>
       </Dialog>
