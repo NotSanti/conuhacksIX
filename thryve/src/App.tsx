@@ -1,7 +1,8 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 import "./App.css";
 import { Button } from "@headlessui/react";
+import Achievements from "./components/Achievements";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         >
           Headless UI Button
         </Button>
-      </div>
+        <Achievements/>
+        </div>
     </div>
   );
 }
