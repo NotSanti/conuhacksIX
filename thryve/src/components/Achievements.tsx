@@ -1,15 +1,11 @@
 import { useState } from "react";
-//import React from 'react';
 import { Button } from "@headlessui/react";
 import { FaTrophy } from 'react-icons/fa';
-
 import Popup from "./Popup";
+import "../Animation.css"
 
 function Achievements() {
   
-  // const onClick = () => {
-  //   console.log("button pressed")
-  // }
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleOpenPopup = () => {
@@ -23,14 +19,11 @@ function Achievements() {
   return (
     <>
       <Button
-        className={
-          "border border-red-500 hover:cursor-pointer bg-amber-500 rounded p-2 active:bg-amber-700"
-        }
         onClick={handleOpenPopup}
       >
-        <FaTrophy/>
+        <FaTrophy className="text-4xl tilt-animation"/>
       </Button>
-      <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
+      <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Achievements"}/>
     </>
   );
 }
