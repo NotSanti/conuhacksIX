@@ -3,7 +3,12 @@ import Curve from "./Curve";
 import Rectangle from "./Rectangle";
 import Icon from './Icon.tsx'
 
-const Roadmap = () => {
+interface IProps {
+  showNewGoal?: boolean;
+}
+
+
+const Roadmap = ({showNewGoal}: IProps) => {
   const elements = [
     {
       Component: Curve,
@@ -174,7 +179,11 @@ const Roadmap = () => {
     },
     {
       Component: Curve,
-      props: { flipHorizontal: true, flipVertical: true, fill: "#f7c42a" },
+      props: { flipHorizontal: true, flipVertical: true, fill: "#f7c42a",
+        layeredComponent: 
+          showNewGoal ? ( <div className="fade-container absolute left-[5rem] z-10">
+            <Icon goalCategory='Other'></Icon>
+          </div>) : null},
       style: "left-[81.9rem] top-[18.46rem]",
     },
     {

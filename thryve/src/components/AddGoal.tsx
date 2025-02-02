@@ -5,17 +5,20 @@ import "../Animation.css";
 import { GoGoal } from "react-icons/go";
 import NewGoalPopup from "./NewGoalPopup";
 
+interface IProps{
+    setIsNewGoalCreated: () => void;
+}
 
-function AddGoal() {
+function AddGoal({setIsNewGoalCreated}: IProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleOpenPopup = () => {
-
     setIsPopupOpen(true);
   };
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
+    setIsNewGoalCreated();
   };
 
   return (
