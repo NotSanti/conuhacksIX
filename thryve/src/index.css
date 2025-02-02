@@ -49,3 +49,8 @@ body {
     transform: scale(1);
   }
 }
+
+.img-overlay {
+  background-color: rgba(255, 0, 0, 0.5); /* Red overlay with 50% opacity */
+  mix-blend-mode: multiply;
+}
