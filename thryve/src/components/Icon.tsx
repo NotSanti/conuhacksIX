@@ -34,7 +34,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <FaHeart className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup}  title={"Goal"} content={<GoalPopup goalTitle='Romance'></GoalPopup>}/>   
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup}  title={"Goal"} content={<GoalPopup goalTitle='Romance'></GoalPopup>} closeBtn={true}/>   
             </div>
     );} if(goalCategory == "health"){      
         return (
@@ -42,7 +42,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <MdMonitorHeart className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} if(goalCategory == "social"){      
         return (
@@ -50,7 +50,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <FaUserFriends className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} if(goalCategory == "personalGrowth"){      
         return (
@@ -58,7 +58,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <FaPersonArrowUpFromLine className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} if(goalCategory == "finance"){      
         return (
@@ -66,7 +66,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <FaMoneyCheckDollar className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} /> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} if(goalCategory == "education"){      
         return (
@@ -74,7 +74,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <FaUserGraduate className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} if(goalCategory == "travel"){      
         return (
@@ -82,7 +82,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <BiSolidPlaneAlt className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} if(goalCategory == "work"){      
         return (
@@ -90,7 +90,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}> 
                     <MdWork className="size-16 enlarge-box"/>
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     );} else {
         return (
@@ -98,7 +98,7 @@ function Icon({goalCategory} : IconProps){
                 <Button onClick={handleOpenPopup}>    
                     <FaStar className="size-16 enlarge-box"/>  
                 </Button>
-                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} closeBtn={true}/> 
             </div>
     )}     
 }
