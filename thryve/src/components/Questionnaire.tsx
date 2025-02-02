@@ -47,7 +47,7 @@ function Questionnaire() {
               <select
                 value={answers[question.id] || ''}
                 onChange={(e) => handleSelectChange(question.id, e.target.value)}
-                className="border border-gray-300 rounded p-2 w-full"
+                className="border border-gray-300 rounded p-2 w-full text-black"
                 >
                   <option value="" disabled>Select an answer</option>
                   {question.options.map((option: string, index: number) => (
