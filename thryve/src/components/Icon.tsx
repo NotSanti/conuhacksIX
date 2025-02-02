@@ -40,7 +40,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <MdMonitorHeart className="size-16 ..."/>
+                    <MdMonitorHeart className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
@@ -48,7 +48,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <FaUserFriends className="size-16 ..."/>
+                    <FaUserFriends className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
@@ -56,7 +56,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <FaPersonArrowUpFromLine className="size-16 ..."/>
+                    <FaPersonArrowUpFromLine className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
@@ -64,7 +64,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <FaMoneyCheckDollar className="size-16 ..."/>
+                    <FaMoneyCheckDollar className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"} /> 
             </div>
@@ -72,7 +72,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <FaUserGraduate className="size-16 ..."/>
+                    <FaUserGraduate className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
@@ -80,7 +80,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <BiSolidPlaneAlt className="size-16 ..."/>
+                    <BiSolidPlaneAlt className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
@@ -88,7 +88,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <MdWork className="size-16 ..."/>
+                    <MdWork className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
@@ -96,7 +96,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}>    
-                    <FaStar className="size-16 ..."/>  
+                    <FaStar className="size-16 enlarge-box"/>  
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>
