@@ -12,8 +12,8 @@ function App() {
       <div className="flex w-full justify-center items-center text-3xl font-bold">
         THRYVE
       </div>
-        <Questionnaire setBlob={setBlob}/>
       <div className="flex flex-col">
+      <Questionnaire setBlob={setBlob}/>
         <div className="w-full  h-[90vh]">
           <Roadmap />
         </div>
