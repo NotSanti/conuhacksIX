@@ -4,6 +4,7 @@ import Achievements from "./components/Achievements";
 import Questionnaire from "./components/Questionnaire";
 import Roadmap from "./components/Roadmap";
 import Quote from "./components/Quote.tsx";
+import AddGoal from "./components/AddGoal.tsx";
 
 function App() {
   const [blob, setBlob] = useState<Blob | null>(null);
@@ -20,6 +21,9 @@ function App() {
         <div className="flex w-full pr-4 items-center justify-center">
           <div className="flex justify-center italic font-pacifico  ">
             <Quote />
+          </div>
+          <div className="absolute left-4 fade-container ">
+            <AddGoal />
           </div>
           <div className="absolute right-4 fade-container ">
             <Achievements />
