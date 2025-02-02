@@ -4,7 +4,12 @@ import Rectangle from "./Rectangle";
 import Icon from "./Icon.tsx";
 import BrushStroke from "./BrushStroke.tsx";
 
-const Roadmap = () => {
+interface IProps {
+  showNewGoal?: boolean;
+}
+
+
+const Roadmap = ({showNewGoal}: IProps) => {
   const renderBrushStroke = (fill: string) => {
     return (
       <div className="absolute z-[-1] top-[-1rem] left-[-1rem]">
@@ -227,7 +232,10 @@ const Roadmap = () => {
         flipHorizontal: true,
         flipVertical: true,
         fill: "rgba(247, 196, 42, 0.4)",
-      },
+        layeredComponent: 
+          showNewGoal ? ( <div className="fade-container absolute left-[5rem] z-10">
+            <Icon goalCategory='Other'></Icon>
+          </div>) : null},
       style: "left-[81.9rem] top-[18.46rem]",
     },
     {
