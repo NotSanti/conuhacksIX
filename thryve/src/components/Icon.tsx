@@ -10,6 +10,7 @@ import { FaUserGraduate } from "react-icons/fa";
 import Popup from "./Popup";
 import { useState } from 'react';
 import GoalPopup from './GoalPopup';
+import "../Animation.css"
 
 interface IconProps {
     goalCategory?: string;
@@ -30,7 +31,7 @@ function Icon({goalCategory} : IconProps){
         return (
             <div>
                 <Button onClick={handleOpenPopup}> 
-                    <FaHeart className="size-16 ..."/>
+                    <FaHeart className="size-16 enlarge-box"/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup}  title={"Goal"} content={<GoalPopup goalTitle='Romance'></GoalPopup>}/>   
             </div>
