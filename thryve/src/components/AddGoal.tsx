@@ -3,6 +3,7 @@ import { Button } from "@headlessui/react";
 import Popup from "./Popup";
 import "../Animation.css";
 import { GoGoal } from "react-icons/go";
+import NewGoalPopup from "./NewGoalPopup";
 
 
 function AddGoal() {
@@ -17,7 +18,6 @@ function AddGoal() {
     setIsPopupOpen(false);
   };
 
-
   return (
     <>
       <Button onClick={handleOpenPopup}>
@@ -26,8 +26,8 @@ function AddGoal() {
       <Popup
         isOpen={isPopupOpen}
         onClose={handleClosePopup}
-        title={"New Goal"}
-        content={"m"}
+        title={"Add New Goal"}
+        submitForm
       />
     </>
   );

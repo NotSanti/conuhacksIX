@@ -7,6 +7,7 @@
   } from "@headlessui/react";
   import "../Animation.css";
   import { MdClose } from "react-icons/md";
+import NewGoalPopup from "./NewGoalPopup";
 
   interface Props {
     isOpen: boolean;
@@ -15,6 +16,7 @@
     description?: string;
     content?: React.ReactNode;
     closeBtn?: boolean;
+    submitForm?: boolean;
   }
 
   function Popup({
@@ -24,6 +26,7 @@
     description,
     content,
     closeBtn = true,
+    submitForm
   }: Props) {
     return (
       <>
@@ -50,6 +53,7 @@
                 </Description>
               )}
               {content && <div className="mt-4">{content}</div>}
+              {submitForm && <NewGoalPopup onClose={onClose}/>}
             </DialogPanel>
           </div>
         </Dialog>
