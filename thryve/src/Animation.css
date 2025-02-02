@@ -28,6 +28,21 @@
     animation: tilt-back 0.2s ease-in-out forwards;
 }
 
+.enlarge-box:hover {
+    animation: enlarge 2s infinite;
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .overlay {
     position: fixed;
     top: 0;

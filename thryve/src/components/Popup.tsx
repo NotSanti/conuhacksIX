@@ -14,9 +14,17 @@ interface Props {
   title?: string;
   description?: string;
   content?: React.ReactNode;
+  closeBtn?: boolean;
 }
 
-function Popup({ isOpen, onClose, title, description, content }: Props) {
+function Popup({
+  isOpen,
+  onClose,
+  title,
+  description,
+  content,
+  closeBtn = true,
+}: Props) {
   return (
     <>
       <Dialog open={isOpen} onClose={onClose} className="overlay">
@@ -28,11 +36,13 @@ function Popup({ isOpen, onClose, title, description, content }: Props) {
                   {title}
                 </DialogTitle>
               )}
-              <div className="flex justify-end">
-                <Button onClick={onClose} className="text-black">
-                  <MdClose />
-                </Button>
-              </div>
+              {closeBtn && (
+                <div className="flex justify-end">
+                  <Button onClick={onClose} className="text-black">
+                    X
+                  </Button>
+                </div>
+              )}
             </div>
             {description && (
               <Description className="text-black mt-4">
