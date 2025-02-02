@@ -3,9 +3,9 @@
 import "./App.css";
 import { Button } from "@headlessui/react";
 import Achievements from "./components/Achievements";
-import Icon from './components/Icon.tsx'
-import Quote from './components/Quote.tsx'
+import Questionnaire from "./components/Questionnaire";
 import Roadmap from "./components/Roadmap";
+import Quote from './components/Quote.tsx'
 
 function App() {
   return (
@@ -16,6 +16,8 @@ function App() {
       <div className="w-full flex justify-center items-center flex-col h-full">
         <Roadmap />
         <Achievements/>
+        <Questionnaire/>
+        
       </div>
       <div className="flex justify-center italic font-pacifico">
         <Quote></Quote>
