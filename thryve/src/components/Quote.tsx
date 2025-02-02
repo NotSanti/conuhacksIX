@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 interface QuoteData {
   quote: string;
@@ -13,11 +13,11 @@ function Quote() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://qapi.vercel.app/api/random');
-      setQuote(response.data);  // Assuming the response contains quote and author
+      const response = await axios.get("https://qapi.vercel.app/api/random");
+      setQuote(response.data); // Assuming the response contains quote and author
       setLoading(false);
     } catch (err) {
-      setError('Failed to fetch quote');
+      setError("Failed to fetch quote");
       setLoading(false);
     }
   };
@@ -30,7 +30,7 @@ function Quote() {
   if (error) return <div>{error}</div>;
 
   return (
-    <div>
+    <div className="fade-container">
       {quote ? (
         <blockquote>
           <p>{quote.quote}</p>
