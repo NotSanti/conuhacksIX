@@ -1,7 +1,8 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 import "./App.css";
 import { Button } from "@headlessui/react";
+import Achievements from "./components/Achievements";
 import Roadmap from "./components/Roadmap";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         >
           Headless UI Button
         </Button>
+        <Achievements/>
         <Roadmap />
       </div>
     </div>
