@@ -11,7 +11,23 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #c0c9c2;
+  /* background: radial-gradient(
+        circle at 0% 50%,
+        rgba(96, 16, 48, 0) 9px,
+        #613 10px,
+        rgba(96, 16, 48, 0) 11px
+      )
+      0px 10px,
+    radial-gradient(
+      at 100% 100%,
+      rgba(96, 16, 48, 0) 9px,
+      #613 10px,
+      rgba(96, 16, 48, 0) 11px
+    ),
+    #44475a;
+  background-size: 20px 20px; */
+
+  background: #44475a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,4 +35,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
+}
+
+.pattern {
+  -webkit-mask-image: url("/src/assets/grit.png");
+  mask-image: url("/src/assets/grit.png");
 }
