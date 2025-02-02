@@ -1,3 +1,4 @@
+import { Button } from '@headlessui/react';
 import { useState } from 'react';
 import { RiFootprintFill } from "react-icons/ri";
 import { RiFootprintLine } from "react-icons/ri";
@@ -24,8 +25,7 @@ function GoalPopup({goalTitle, goalSteps, goalStepsLeft} : GoalProps){
         }
 
     return (
-        <div className="text-lg font-bold text-black">
-            {goalTitle}
+        <div className="text-lg font-bold text-black">       
             <div className="flex flex-wrap">
                 {stepsFilled > 0 &&
                     Array.from({ length: stepsFilled }).map((_, index) => (
@@ -39,9 +39,12 @@ function GoalPopup({goalTitle, goalSteps, goalStepsLeft} : GoalProps){
                     </button>
                 ))}
             </div>
-            <button onClick={addStep} className="mt-2 px-4 py-2 bg-black text-white rounded hover:bg-gray-800">
-                +
-            </button>
+            <div className='flex justify-end'>
+                <Button onClick={addStep} className="
+                 px-3 py-1 mx-5 my-5 bg-black text-white rounded hover:bg-gray-800">
+                    +
+                </Button>   
+            </div>
           </div>
         )
 }
