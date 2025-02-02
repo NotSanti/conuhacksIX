@@ -12,7 +12,12 @@ body {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
-  background: #44475a;
+  background-color: #44475a;
+  opacity: 0.8;
+  background-image: radial-gradient(#ffffff 0.55px, transparent 0.55px),
+    radial-gradient(#ffffff 0.55px, #44475a 0.55px);
+  background-size: 22px 22px;
+  background-position: 0 0, 11px 11px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -53,4 +58,18 @@ body {
 .img-overlay {
   background-color: rgba(255, 0, 0, 0.5); /* Red overlay with 50% opacity */
   mix-blend-mode: multiply;
+}
+
+.loader {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) left/20%
+    100%;
+  background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+  animation: l17 2s infinite steps(6);
+}
+@keyframes l17 {
+  100% {
+    background-size: 120% 100%;
+  }
 }
