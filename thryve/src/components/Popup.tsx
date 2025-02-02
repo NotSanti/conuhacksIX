@@ -1,7 +1,12 @@
-//import { useState } from "react";
-//import React from 'react';
-import { Button, Dialog, DialogPanel, DialogTitle, Description } from "@headlessui/react";
-import "../Animation.css"
+import {
+  Button,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Description,
+} from "@headlessui/react";
+import "../Animation.css";
+import { MdClose } from "react-icons/md";
 
 interface Props {
   isOpen: boolean;
@@ -11,20 +16,29 @@ interface Props {
   content?: React.ReactNode;
 }
 
-function Popup({ isOpen, onClose, title, description, content}: Props){
-
+function Popup({ isOpen, onClose, title, description, content }: Props) {
   return (
     <>
       <Dialog open={isOpen} onClose={onClose} className="overlay">
-        <div className="fixed inset-0">
-          <DialogPanel className="bg-white rounded-lg p-6 max-w-md mx-auto relative">
+        <div className="fixed inset-0 flex w-full h-full justify-center items-center">
+          <DialogPanel className="bg-white rounded-lg p-6 max-w-md mx-auto relative min-w-[20rem]">
             <div className="flex justify-between items-center">
-              {title && <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>}
+              {title && (
+                <DialogTitle className="text-lg font-bold text-black">
+                  {title}
+                </DialogTitle>
+              )}
               <div className="flex justify-end">
-                <Button onClick={onClose} className="text-black">X</Button>
+                <Button onClick={onClose} className="text-black">
+                  <MdClose />
+                </Button>
               </div>
             </div>
-            {description && <Description className="text-black mt-4">{description}</Description>}
+            {description && (
+              <Description className="text-black mt-4">
+                {description}
+              </Description>
+            )}
             {content && <div className="mt-4">{content}</div>}
           </DialogPanel>
         </div>
