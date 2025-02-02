@@ -3,6 +3,7 @@ import { Button } from "@headlessui/react";
 import { FaTrophy } from "react-icons/fa";
 import Popup from "./Popup";
 import "../Animation.css";
+import AchievementList from "./AchievementList";
 
 function Achievements() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -18,7 +19,20 @@ function Achievements() {
   const renderAchievements = () => {
     return (
       <div className="text-black flex flex-col">
-        <div className="flex"></div>
+        <AchievementList
+          isCompleted={[0, 1, 2, 3, 4, 5, 6, 7, 8]}
+          tooltips={[
+            "Romance",
+            "Reach Health Goal",
+            "Make New Friends",
+            "Grow Personally",
+            "Earn Money",
+            "Graduate from University",
+            "Travel",
+            "Get New Job",
+            "Become a Star",
+          ]}
+        />
       </div>
     );
   };
