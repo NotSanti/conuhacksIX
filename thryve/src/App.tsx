@@ -14,22 +14,14 @@ function App() {
         THRYVE
       </div>
       <div className="w-full flex justify-center items-center flex-col h-full">
-        <Button
-          className={
-            "border border-red-500 hover:cursor-pointer bg-amber-500 rounded p-2 active:bg-amber-700"
-          }
-          onClick={() => {}}
-        >
-          Headless UI Button
-        </Button>
+        <Roadmap />
         <Achievements/>
         </div>
       <div>
         <Icon goalCategory='romance' />
       </div>
-      <div>
+      <div className="flex justify-center italic font-pacifico">
         <Quote></Quote>
-        <Roadmap />
       </div>
     </div>
   );

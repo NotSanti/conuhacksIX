@@ -34,7 +34,7 @@ function Quote() {
       {quote ? (
         <blockquote>
           <p>{quote.quote}</p>
-          <footer>- {quote.author}</footer>
+          <footer className="flex justify-center">- {quote.author}</footer>
         </blockquote>
       ) : (
         <p>No quote available</p>
