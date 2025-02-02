@@ -4,6 +4,7 @@ import "./App.css";
 import { Button } from "@headlessui/react";
 import Achievements from "./components/Achievements";
 import Icon from './components/Icon.tsx'
+import Quote from './components/Quote.tsx'
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </div>
       <div>
         <Icon goalCategory='romance' />
+      </div>
+      <div>
+        <Quote></Quote>
       </div>
     </div>
   );
