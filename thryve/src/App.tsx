@@ -18,7 +18,7 @@ function App() {
         <div className="self-end pr-4">
           <Achievements />
         </div>
-        <div className="flex justify-center italic font-pacifico">
+        <div className="flex justify-center italic font-pacifico mt-5">
           <Quote></Quote>
         </div>
       </div>
