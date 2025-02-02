@@ -1,0 +1,17 @@
+[
+  {
+      "id": 1,
+      "questionText": "What is your favorite color?",
+      "options": ["Red", "Blue", "Green", "Yellow"]
+  },
+  {
+      "id": 2,
+      "questionText": "What is your favorite animal?",
+      "options": ["Dog", "Cat", "Bird", "Fish"]
+  },
+  {
+      "id": 3,
+      "questionText": "What is your favorite food?",
+      "options": ["Pizza", "Burger", "Sushi", "Pasta"]
+  }
+]

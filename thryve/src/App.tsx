@@ -3,6 +3,7 @@
 import "./App.css";
 import { Button } from "@headlessui/react";
 import Achievements from "./components/Achievements";
+import Questionnaire from "./components/Questionnaire";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           Headless UI Button
         </Button>
         <Achievements/>
+        <Questionnaire/>
         </div>
     </div>
   );
