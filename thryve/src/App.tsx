@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="w-full h-full">
       <div className="flex w-full justify-center items-center text-3xl font-bold fade-container ">
-        <img src="/logo.png" alt="THRYVE" className="h-40 absolute top-0" />
+        <img src="/logo.png" alt="THRYVE" className="h-60 absolute top-0" />
       </div>
       <div className="flex flex-col">
         <Questionnaire setBlob={setBlob} />
