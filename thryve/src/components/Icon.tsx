@@ -7,6 +7,7 @@ import { BiSolidPlaneAlt } from "react-icons/bi";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
 import { FaPersonArrowUpFromLine } from "react-icons/fa6";
 import { FaUserGraduate } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
 import Popup from "./Popup";
 import { useState } from 'react';
 import GoalPopup from './GoalPopup';
@@ -80,6 +81,14 @@ function Icon({goalCategory} : IconProps){
             <div>
                 <Button onClick={handleOpenPopup}> 
                     <BiSolidPlaneAlt className="size-16 ..."/>
+                </Button>
+                <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
+            </div>
+    );} if(goalCategory == "work"){      
+        return (
+            <div>
+                <Button onClick={handleOpenPopup}> 
+                    <MdWork className="size-16 ..."/>
                 </Button>
                 <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Goal"}/> 
             </div>

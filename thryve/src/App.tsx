@@ -16,9 +16,6 @@ function App() {
       <div className="w-full flex justify-center items-center flex-col h-full">
         <Roadmap />
         <Achievements/>
-        </div>
-      <div>
-        <Icon goalCategory='romance' />
       </div>
       <div className="flex justify-center italic font-pacifico">
         <Quote></Quote>

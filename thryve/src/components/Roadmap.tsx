@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Curve from "./Curve";
 import Rectangle from "./Rectangle";
+import Icon from './Icon.tsx'
 
 const Roadmap = () => {
   const elements = [
@@ -9,8 +10,10 @@ const Roadmap = () => {
       props: {
         fill: "#fff9BE",
         layeredComponent: (
-          <div className="w-5 h-5 bg-red-500 rounded absolute left-[5rem] z-10"></div>
-        ),
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='social'></Icon>
+          </div>
+        )
       },
       style: "left-[-1rem] top-[4.78rem] ",
     },
@@ -26,8 +29,9 @@ const Roadmap = () => {
         flipVertical: true,
         fill: "#fff9BE",
         layeredComponent: (
-          <div className="w-5 h-5 bg-red-500 rounded absolute left-[5rem] z-10"></div>
-        ),
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='personalGrowth'></Icon>
+          </div>)
       },
       style: "left-[7.3rem] top-[19.96rem]",
     },
@@ -38,7 +42,13 @@ const Roadmap = () => {
     },
     {
       Component: Curve,
-      props: { rotate: true, flipHorizontal: true, fill: "#fff9BE" },
+      props: { rotate: true, flipHorizontal: true, fill: "#fff9BE",
+        layeredComponent: (
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='education'></Icon>
+          </div>
+        )
+       },
       style: "left-[24.66rem] top-[24.1rem]",
     },
     {
@@ -48,17 +58,32 @@ const Roadmap = () => {
     },
     {
       Component: Curve,
-      props: { flipHorizontal: true, flipVertical: true, fill: "#fff9BE" },
+      props: { flipHorizontal: true, flipVertical: true, fill: "#fff9BE" , 
+        layeredComponent: (
+        <div className="absolute left-[5rem] z-10">
+          <Icon goalCategory='romance'></Icon>
+        </div>
+      ),},
       style: "left-[28.85rem] top-[41.46rem]",
     },
     {
       Component: Rectangle,
-      props: { fill: "#fff9BE" },
+      props: { fill: "#fff9BE", 
+        layeredComponent: (
+        <div className="absolute left-[5rem] z-10">
+          <Icon goalCategory='work'></Icon>
+        </div>
+      ) },
       style: "left-[38.96rem] top-[41.46rem]",
     },
     {
       Component: Rectangle,
-      props: { fill: "#fff9BE" },
+      props: { fill: "#fff9BE" , 
+        layeredComponent: (
+        <div className="absolute left-[5rem] z-10">
+          <Icon goalCategory='travel'></Icon>
+        </div>
+      )},
       style: "left-[48.96rem] top-[41.46rem]",
     },
     {
@@ -68,12 +93,22 @@ const Roadmap = () => {
     },
     {
       Component: Curve,
-      props: { rotate: true, fill: "#fff9BE" },
+      props: { rotate: true, fill: "#fff9BE",
+        layeredComponent: (
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='finance'></Icon>
+          </div>
+       )},
       style: "left-[66.26rem] top-[37.3rem]",
     },
     {
       Component: Curve,
-      props: { fill: "#fff9BE" },
+      props: { fill: "#fff9BE",
+        layeredComponent: (
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='personalGrowth'></Icon>
+          </div>)
+       },
       style: "left-[62.1rem] top-[29.90rem]",
     },
     {
@@ -83,12 +118,22 @@ const Roadmap = () => {
     },
     {
       Component: Rectangle,
-      props: { fill: "#fff9BE" },
+      props: { fill: "#fff9BE", layeredComponent: (
+        <div className="absolute left-[5rem] z-10">
+          <Icon goalCategory='health'></Icon>
+        </div>
+      )},
       style: "left-[42.54rem] top-[29.90rem]",
     },
     {
       Component: Curve,
-      props: { rotate: true, flipVertical: true, fill: "#fff9BE" },
+      props: { rotate: true, flipVertical: true, fill: "#fff9BE",
+        layeredComponent: (
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='social'></Icon>
+          </div>
+        )
+      },
       style: "left-[34.74rem] top-[25.8rem]",
     },
     {
@@ -98,7 +143,12 @@ const Roadmap = () => {
     },
     {
       Component: Rectangle,
-      props: { fill: "#fff9BE" },
+      props: { fill: "#fff9BE",
+        layeredComponent: (
+          <div className="absolute left-[5rem] z-10">
+            <Icon goalCategory='travel'></Icon>
+          </div>)
+       },
       style: "left-[48.96rem] top-[18.44rem]",
     },
     {
@@ -108,7 +158,8 @@ const Roadmap = () => {
     },
     {
       Component: Curve,
-      props: { flipHorizontal: true, fill: "#fff9BE" },
+      props: { flipHorizontal: true, fill: "#fff9BE"
+      },
       style: "left-[60.4rem] top-[6.94rem]",
     },
     {
