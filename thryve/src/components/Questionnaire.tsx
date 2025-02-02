@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@headlessui/react";
 // import { FaRegCommentDots } from 'react-icons/fa';
 import Popup from "./Popup";
+// import { saveAs } from 'file-saver';
 import questions from '../questionnaire.json';
 import "../Animation.css"
 
@@ -11,7 +12,11 @@ interface Question {
   options: string[];
 }
 
-function Questionnaire() {
+interface QuestionnaireProps {
+  setBlob: (blob: Blob) => void;
+}
+
+function Questionnaire({ setBlob }: QuestionnaireProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -38,6 +43,15 @@ function Questionnaire() {
     setIsPopupOpen(false);
   };
 
+  const createBlob = () => {
+    const answersArray = Object.entries(answers).map(([questionId, answer]) => ({
+      questionId,
+      answer
+    }));
+    const newBlob = new Blob([JSON.stringify(answersArray, null, 2)], { type: 'application/json' });
+    setBlob(newBlob);
+  };
+
   const questionnaireContent = (
       <div className="">
         <form onSubmit={handleSubmit}>
@@ -59,8 +73,8 @@ function Questionnaire() {
             </div>
           ))}
           {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-          <Button type="submit" className="border border-red-500 hover:cursor-pointer bg-amber-500 rounded p-2 active:bg-amber-700">
-            Submit
+          <Button type="submit" onClick={createBlob} className="border border-red-500 hover:cursor-pointer bg-amber-500 rounded p-2 active:bg-amber-700">
+            Save
           </Button>
         </form>
       </div>
