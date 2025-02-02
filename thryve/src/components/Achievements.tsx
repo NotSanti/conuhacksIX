@@ -5,10 +5,23 @@ import Popup from "./Popup";
 import "../Animation.css";
 import AchievementList from "./AchievementList";
 
+// interface AchievementProps {
+//   blob?: Blob | null;
+// }
+
+// function Achievements( { blob }: AchievementProps ) {
 function Achievements() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  // const [description, setDescription] = useState<string | null>(null);
 
   const handleOpenPopup = () => {
+    // if (blob) {
+    //   const reader = new FileReader();
+    //   reader.onload = () => {
+    //     setDescription(reader.result as string);
+    //   };
+    //   reader.readAsText(blob);
+    // }
     setIsPopupOpen(true);
   };
 
