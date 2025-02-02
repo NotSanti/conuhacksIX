@@ -1,8 +1,8 @@
 [
   {
       "id": 1,
-      "questionText": "What is your favorite color?",
-      "options": ["Red", "Blue", "Green", "Yellow"]
+      "questionText": "What are your goals in life?",
+      "options": ["Travel", "Romance", "Career", "Financial Security"]
   },
   {
       "id": 2,

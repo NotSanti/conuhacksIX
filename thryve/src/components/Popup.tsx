@@ -9,9 +9,10 @@ interface Props {
   title?: string;
   description?: string;
   content?: React.ReactNode;
+  closeBtn: boolean;
 }
 
-function Popup({ isOpen, onClose, title, description, content}: Props){
+function Popup({ isOpen, onClose, title, description, content, closeBtn}: Props){
 
   return (
     <>
@@ -20,9 +21,11 @@ function Popup({ isOpen, onClose, title, description, content}: Props){
           <DialogPanel className="bg-white rounded-lg p-6 max-w-md mx-auto relative">
             <div className="flex justify-between items-center">
               {title && <DialogTitle className="text-lg font-bold text-black">{title}</DialogTitle>}
-              <div className="flex justify-end">
-                <Button onClick={onClose} className="text-black">X</Button>
-              </div>
+              {closeBtn &&
+                <div className="flex justify-end">
+                  <Button onClick={onClose} className="text-black">X</Button>
+                </div>
+              }
             </div>
             {description && <Description className="text-black mt-4">{description}</Description>}
             {content && <div className="mt-4">{content}</div>}
