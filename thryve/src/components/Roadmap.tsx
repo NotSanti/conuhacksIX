@@ -6,17 +6,29 @@ const Roadmap = () => {
   const elements = [
     {
       Component: Curve,
-      props: { fill: "#fff9BE" },
-      style: "left-[-1rem] top-[4.78rem]",
+      props: {
+        fill: "#fff9BE",
+        layeredComponent: (
+          <div className="w-5 h-5 bg-red-500 rounded absolute left-[5rem] z-10"></div>
+        ),
+      },
+      style: "left-[-1rem] top-[4.78rem] ",
     },
     {
       Component: Rectangle,
       props: { flipVertical: true, fill: "#fff9BE" },
-      style: "left-[3.4rem] top-[12.36rem]",
+      style: "left-[3.4rem] top-[12.36rem] ",
     },
     {
       Component: Curve,
-      props: { flipHorizontal: true, flipVertical: true, fill: "#fff9BE" },
+      props: {
+        flipHorizontal: true,
+        flipVertical: true,
+        fill: "#fff9BE",
+        layeredComponent: (
+          <div className="w-5 h-5 bg-red-500 rounded absolute left-[5rem] z-10"></div>
+        ),
+      },
       style: "left-[7.3rem] top-[19.96rem]",
     },
     {
