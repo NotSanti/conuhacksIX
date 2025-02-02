@@ -3,6 +3,7 @@ import { useState } from "react";
 import Achievements from "./components/Achievements";
 import Questionnaire from "./components/Questionnaire";
 import Roadmap from "./components/Roadmap";
+import Quote from './components/Quote.tsx'
 
 function App() {
   const [blob, setBlob] = useState<Blob | null>(null);
@@ -17,7 +18,10 @@ function App() {
           <Roadmap />
         </div>
         <div className="self-end pr-4">
-          <Achievements blob={blob}/>
+          <Achievements />
+        </div>
+        <div className="flex justify-center italic font-pacifico mt-5">
+          <Quote></Quote>
         </div>
       </div>
     </div>
