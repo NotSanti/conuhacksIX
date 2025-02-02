@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button } from "@headlessui/react";
-import { FaTrophy } from 'react-icons/fa';
+import { FaTrophy } from "react-icons/fa";
 import Popup from "./Popup";
-import "../Animation.css"
+import "../Animation.css";
+import AchievementList from "./AchievementList";
 
 // interface AchievementProps {
 //   blob?: Blob | null;
@@ -28,20 +29,38 @@ function Achievements() {
     setIsPopupOpen(false);
   };
 
+  const renderAchievements = () => {
+    return (
+      <div className="text-black flex flex-col">
+        <AchievementList
+          isCompleted={[0, 1, 2, 3, 4, 5, 6, 7, 8]}
+          tooltips={[
+            "Romance",
+            "Reach Health Goal",
+            "Make New Friends",
+            "Grow Personally",
+            "Earn Money",
+            "Graduate from University",
+            "Travel",
+            "Get New Job",
+            "Become a Star",
+          ]}
+        />
+      </div>
+    );
+  };
+
   return (
     <>
-      <Button
-        onClick={handleOpenPopup}
-      >
-        <FaTrophy className="text-4xl tilt-animation"/>
+      <Button onClick={handleOpenPopup}>
+        <FaTrophy className="text-4xl tilt-animation" />
       </Button>
-
-      <Popup 
-        isOpen={isPopupOpen} 
-        onClose={handleClosePopup} 
-        title={"Achievements"} 
-        // description={description || "No achievements to display"}
-        closeBtn={true}/>
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+        title={"Achievements"}
+        content={renderAchievements()}
+      />
     </>
   );
 }

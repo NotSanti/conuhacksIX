@@ -11,21 +11,6 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background: radial-gradient(
-        circle at 0% 50%,
-        rgba(96, 16, 48, 0) 9px,
-        #613 10px,
-        rgba(96, 16, 48, 0) 11px
-      )
-      0px 10px,
-    radial-gradient(
-      at 100% 100%,
-      rgba(96, 16, 48, 0) 9px,
-      #613 10px,
-      rgba(96, 16, 48, 0) 11px
-    ),
-    #44475a;
-  background-size: 20px 20px; */
 
   background: #44475a;
 
@@ -35,9 +20,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
+
+  --rt-color-white: #fff;
+  --rt-color-dark: #222;
+  --rt-color-success: #8dc572;
+  --rt-color-error: #be6464;
+  --rt-color-warning: #f0ad4e;
+  --rt-color-info: #337ab7;
+  --rt-opacity: 0.9;
+  --rt-transition-show-delay: 0.15s;
+  --rt-transition-closing-delay: 0.15s;
 }
 
-.pattern {
-  -webkit-mask-image: url("/src/assets/grit.png");
-  mask-image: url("/src/assets/grit.png");
+.fade-container {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-container.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
