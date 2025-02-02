@@ -23,7 +23,7 @@ function Achievements() {
       >
         <FaTrophy className="text-4xl tilt-animation"/>
       </Button>
-      <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Achievements"}/>
+      <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title={"Achievements"} closeBtn={true}/>
     </>
   );
 }
